@@ -31,7 +31,9 @@
 
         // Metodo per sottrarre 2024 dall'anno di uscita
         public function sottraiAnno() {
+
             $this->anno =  2024 - $this->anno;
+            return $this->anno;
     }
     };
 
@@ -57,19 +59,55 @@
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-12">
+            <div class="col-12 mb-3">
                 <h1 class="text-center">Film</h1>
             </div>
 
-            <div class="col-6">
+            <div class="col-3 d-flex justify-content-center">
                     <div class="card" style="width: 18rem;">
                         <div class="card-body">
                             <h5 class="card-title text-center"><?php echo $v_per_vendetta->titolo?></h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <img src="https://www.cinefacts.it/foto/h!v-per-for-vendetta-poster-locandina-cinefacts.jpg" class="card-img-top" alt="...">
+                            <p class="text-center">Il film è uscito <?php echo $v_per_vendetta->sottraiAnno() ?> anni fa</p>
+                            <p class="text-center">Il genere è <?php echo $v_per_vendetta->genere->genere1." & ".$v_per_vendetta->genere->genere2  ?></p>
                            
                         </div>
                     </div>
             </div>
+            <div class="col-3 d-flex justify-content-center">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title text-center"><?php echo $the_wolf_of_wall_street->titolo?></h5>
+                        <img src="https://www.cinefacts.it/foto/h!the-wolf-of-wall-street-locandina-poster-cinefacts.jpg" class="card-img-top" alt="...">
+                        <p class="text-center">Il film è uscito <?php echo $the_wolf_of_wall_street->sottraiAnno() ?> anni fa</p>
+                        <p class="text-center">Il genere è <?php echo $the_wolf_of_wall_street->genere->genere1." & ".$the_wolf_of_wall_street->genere->genere2  ?></p>
+                       
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 d-flex justify-content-center">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title text-center"><?php echo $La_grande_scommessa->titolo?></h5>
+                        <img src="https://pad.mymovies.it/filmclub/2015/09/162/locandinapg1.jpg" class="card-img-top" alt="...">
+                        <p class="text-center">Il film è uscito <?php echo $La_grande_scommessa->sottraiAnno() ?> anni fa</p>
+                        <p class="text-center">Il genere è <?php echo $La_grande_scommessa->genere->genere1." & ".$La_grande_scommessa->genere->genere2  ?></p>
+                       
+                    </div>
+                </div>
+            </div>
+            <div class="col-3 d-flex justify-content-center">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title text-center"><?php echo $the_Batman->titolo?></h5>
+                        <img src="https://pad.mymovies.it/filmclub/2016/04/093/locandinapg1.jpg" class="card-img-top" alt="...">
+                        <p class="text-center">Il film è uscito <?php echo $the_Batman->sottraiAnno() ?> anni fa</p>
+                        <p class="text-center">Il genere è <?php echo $the_Batman->genere->genere1." & ".$the_Batman->genere->genere2  ?></p>
+                       
+                    </div>
+                </div>
+            </div>
+                
 
         </div>
     </div>
