@@ -11,6 +11,11 @@
             $this->genere = $genere;
             $this->anno = $anno;
         }
+
+        // Metodo per sottrarre 2024 dall'anno
+        public function sottraiAnno() {
+            $this->anno =  2024 - $this->anno;
+    }
     }
 
     // Creo e popolo il nuovo film
@@ -19,7 +24,15 @@
     // Prova per vedere se funziona
     echo $v_per_vendetta->titolo ."<br>";
     echo $v_per_vendetta->anno ."<br>";
-    echo $v_per_vendetta->genere ."<br>"
+    echo $v_per_vendetta->genere ."<br>";
+
+    // Utilizzo la funzione
+    $v_per_vendetta->sottraiAnno();
+
+    // Riprovo il test
+    echo $v_per_vendetta->titolo ."<br>";
+    echo "Il film è uscito ".$v_per_vendetta->anno." anni fa<br>";
+    echo $v_per_vendetta->genere ."<br>";
 ?>
 <!DOCTYPE html>
 <html lang="en">
