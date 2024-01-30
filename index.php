@@ -12,27 +12,21 @@
             $this->anno = $anno;
         }
 
-        // Metodo per sottrarre 2024 dall'anno
+        // Metodo per sottrarre 2024 dall'anno di uscita
         public function sottraiAnno() {
             $this->anno =  2024 - $this->anno;
     }
     }
+    
 
-    // Creo e popolo il nuovo film
-    $v_per_vendetta = new Movie("V per Vendetta" , "azione" , "2005" );
+    // Creo e popolo i film
+    $v_per_vendetta = new Movie("V per Vendetta" , "Azione" , 2005 );
+    $the_wolf_of_wall_street = new Movie("the wolf of wall street" , "Commedia" , 2013 );
+    $La_grande_scommessa = new Movie("La grande scommessa" , "Documentario" , 2015);
+    $the_Batman = new Movie("The Batman", "Azione", 2022)
+    
 
-    // Prova per vedere se funziona
-    echo $v_per_vendetta->titolo ."<br>";
-    echo $v_per_vendetta->anno ."<br>";
-    echo $v_per_vendetta->genere ."<br>";
 
-    // Utilizzo la funzione
-    $v_per_vendetta->sottraiAnno();
-
-    // Riprovo il test
-    echo $v_per_vendetta->titolo ."<br>";
-    echo "Il film è uscito ".$v_per_vendetta->anno." anni fa<br>";
-    echo $v_per_vendetta->genere ."<br>";
 ?>
 <!DOCTYPE html>
 <html lang="en">
